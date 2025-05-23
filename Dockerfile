@@ -15,6 +15,8 @@ ENV PYTHONUNBUFFERED=1
 
 COPY --from=builder /app .
 COPY entrypoint.sh /app/entrypoint.sh
+
+
 RUN chmod +x /app/entrypoint.sh
 
 RUN pip install --upgrade pip && \
